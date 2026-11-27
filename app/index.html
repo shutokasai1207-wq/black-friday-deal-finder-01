@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday Deal Finder 2026 — Real Deals, Checked Prices</title>
+<meta name="description" content="Real Black Friday and Cyber Monday 2026 deals from Amazon, Best Buy, Walmart, Costco, Nintendo and Japanese stores. Every price checked on 27 November 2026.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">◆</span>
+      <div>
+        <h1>Black Friday <span class="gold">Deal Finder</span></h1>
+        <p class="tagline">Real deals. Real prices. Checked 27 Nov 2026.</p>
+      </div>
+    </div>
+    <div class="header-stats" id="header-stats" aria-live="polite"></div>
+  </div>
+</header>
+
+<nav class="toolbar wrap" aria-label="Deal controls">
+  <div class="search-box">
+    <label class="visually-hidden" for="search">Search deals</label>
+    <input id="search" type="search" placeholder="Search products, brands, stores…" autocomplete="off">
+  </div>
+  <div class="toolbar-row">
+    <label class="field">Category
+      <select id="category" aria-label="Category"></select>
+    </label>
+    <label class="field">Store
+      <select id="store" aria-label="Store"></select>
+    </label>
+    <label class="field">Sort by
+      <select id="sort" aria-label="Sort by">
+        <option value="discount">Biggest discount %</option>
+        <option value="savings">Biggest saving</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="price-desc">Price: high to low</option>
+        <option value="name">Name A–Z</option>
+      </select>
+    </label>
+    <div class="currency-toggle" role="group" aria-label="Currency">
+      <button type="button" id="cur-usd" class="cur-btn active" aria-pressed="true">$ USD</button>
+      <button type="button" id="cur-jpy" class="cur-btn" aria-pressed="false">¥ JPY</button>
+    </div>
+  </div>
+  <div class="category-chips" id="chips" role="group" aria-label="Quick category filter"></div>
+</nav>
+
+<main class="wrap">
+  <section class="hero" aria-label="Top deals">
+    <h2>Today's biggest drops</h2>
+    <p class="hero-sub">The three steepest verified discounts right now — up to 63% off.</p>
+    <div class="hero-grid" id="hero-grid"></div>
+  </section>
+
+  <section id="stats" class="stats" aria-label="Sale summary"></section>
+
+  <p class="result-count" id="result-count" aria-live="polite"></p>
+
+  <section id="deal-grid" class="deal-grid" aria-label="Deals"></section>
+
+  <section id="deal-detail" class="deal-detail" hidden aria-label="Deal detail">
+    <p><a href="#" id="back-link" class="back-link">← Back to all deals</a></p>
+    <div id="detail-body"></div>
+  </section>
+
+  <section class="about" aria-label="About this finder">
+    <h2>How the prices were checked</h2>
+    <p>Every deal on this page is a real listing from a real store. Prices were read from the
+    stores' own Black Friday pages and from deal roundups that cite them (Tom's Guide, 9to5Toys,
+    The Verge, Nintendo's own retail offers, and Japanese deal trackers) on <strong>27 November
+    2026</strong>. The "was" price is the store's own regular or list price. Prices move fast
+    during Black Friday week — always confirm the price on the store page before you buy.</p>
+    <p>Currency conversion uses a fixed rate of <strong>¥150 = $1</strong> and is approximate;
+    stores charge in their own currency. Deals are shown in both currencies so US and Japanese
+    shoppers can compare at a glance.</p>
+    <h2>Sale windows</h2>
+    <ul class="sale-windows" id="sale-windows"></ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Black Friday Deal Finder — built for make.fun's black-friday-deal-finder-01 bounty.
+    Prices checked 27 Nov 2026 (JST). Not affiliated with any store.</p>
+    <p class="fine">Deal data: retailer Black Friday pages and deal roundups, 27 Nov 2026.
+    All trademarks belong to their owners.</p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="views.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
